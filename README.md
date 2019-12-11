@@ -57,7 +57,7 @@ We recommend installing Rust through [rustup](https://www.rustup.rs/). If you do
   $ curl https://sh.rustup.rs -sSf | sh
   ```
 
-  Parity Ethereum also requires `gcc`, `g++`, `pkg-config`, `file`, `make`, and `cmake` packages to be installed.
+  Parity Ethereum also requires `gcc`, `g++`, `pkg-config`, `file`, `make` and `cmake` packages to be installed. `clang`is later required during the build process. It can be obtained from the universe packages on debian/ubuntu platforms.
 
 - OSX:
   ```bash
@@ -85,6 +85,9 @@ Make sure that these binaries are in your `PATH`. After that, you should be able
 # download Parity Ethereum code
 $ git clone https://github.com/paritytech/parity-ethereum
 $ cd parity-ethereum
+
+# check if all dependencies are available
+$ cargo check
 
 # build in release mode
 $ cargo build --release --features final
